@@ -29,7 +29,11 @@ const movies = [
 const MovieCard = ({ title, year, rating, poster }) => {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:scale-105 transition-transform duration-300 w-64">
-      <img src={poster} alt={title} className="w-full h-80 object-cover" />
+      <img
+        src={poster}
+        alt={`${title} movie poster`}
+        className="w-full h-80 object-cover"
+      />
       <div className="p-4">
         <h2 className="text-lg font-semibold">{title}</h2>
         <p className="text-gray-500 text-sm">{year}</p>
@@ -41,11 +45,12 @@ const MovieCard = ({ title, year, rating, poster }) => {
   );
 };
 
-// Main App component to display list
+// Main App component
 export default function App() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10">
       <h1 className="text-3xl font-bold mb-8">Movie List</h1>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {movies.map((movie) => (
           <MovieCard key={movie.id} {...movie} />
