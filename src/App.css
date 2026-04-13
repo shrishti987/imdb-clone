@@ -1,40 +1,52 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-/* Light Theme */
-.light {
-  background: #ffffff;
-  color: #000000;
-  min-height: 100vh;
-}
-
-/* Dark Theme */
-.dark {
   background: #111;
-  color: #ffffff;
-  min-height: 100vh;
+  color: white;
 }
 
-/* App */
 .app {
   text-align: center;
-  padding: 50px;
+  padding: 20px;
 }
 
-/* Button */
+.input-box {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
 button {
-  padding: 10px 15px;
+  margin-left: 5px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   background: #444;
   color: white;
-  transition: 0.3s;
 }
 
 button:hover {
   background: #666;
+}
+
+/* Notes */
+.note {
+  display: flex;
+  justify-content: space-between;
+  background: #222;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.note:hover {
+  transform: scale(1.03);
 }
